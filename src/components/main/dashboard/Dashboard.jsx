@@ -6,6 +6,7 @@ import RecentSales from '../recentSales/RecentSales'
 import TopSelling from '../topSelling/TopSelling'
 import RecentActivity from '../recentActivity/RecentActivity'
 import BudgetReport from '../budgetReport/BudgetReport'
+import WebTraffic from '../webTraffic/WebTraffic'
 
 function Dashboard() {
   const [cards, setCards] = useState([])
@@ -43,6 +44,7 @@ function Dashboard() {
             <div className="col-lg-4">
               <RecentActivity />
               <BudgetReport />
+              <WebTraffic />
             </div>
         </div>
     </section>
