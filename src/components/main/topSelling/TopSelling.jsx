@@ -1,14 +1,12 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import '../topSelling/topSelling.css'
 import CardFilter from '../card/cardFilter/CardFilter'
 import TopSelingItem from './topSellingItem/TopSelingItem'
+import { GlobalContext } from '../../../App'
 
 function TopSelling() {
   const [items, setItems] = useState([])
-  const [filter, setFiler] = useState('Today')
-  const handleFilterChange = filter => {
-    setFiler(filter)
-  }
+  const {filter, handleFilterChange} = useContext(GlobalContext)
 
   const fetchData = () => {
     fetch('http://localhost:4000/topselling')

@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import CardFilter from '../card/cardFilter/CardFilter'
 import WebTrafficChart from './webTrafficChart/WebTrafficChart'
+import { GlobalContext } from '../../../App'
 
 function WebTraffic() {
-    const [filter, setFilter] = useState('Today')
-    const handleFilterChange = filter => {
-        setFilter(filter)
-    }
+    const {filter, handleFilterChange} = useContext(GlobalContext)
 
   return (
     <div className="card">

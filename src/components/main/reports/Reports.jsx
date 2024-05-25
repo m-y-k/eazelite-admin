@@ -1,13 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import './reports.css'
 import CardFilter from  '../card/cardFilter/CardFilter'
 import ReportCharts from './reportCharts/ReportCharts'
+import { GlobalContext } from '../../../App'
 
 function Reports() {
-  const [filter, setFilter] = useState('Today')
-    const handleFilterChange = filter => {
-        setFilter(filter)
-    }
+  const {filter, handleFilterChange} = useContext(GlobalContext)
 
   return (
     <div className="card">

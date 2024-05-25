@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './news.css'
 import CardFilter from '../card/cardFilter/CardFilter'
 import NewsPostItem from './newsPostItem/NewsPostItem'
+import { GlobalContext } from '../../../App'
 
 function News() {
-    const [filter, setFilter] = useState('Today')
     const [news, setNews] = useState([])
-    const handleFilterChange = filter => {
-        setFilter(filter)
-    }
+    const {filter, handleFilterChange} = useContext(GlobalContext)
 
     const fetchData = () => {
         fetch('http://localhost:4000/news')

@@ -7,7 +7,7 @@ function Footer() {
         <div className="copyright">
             &copy; Copyright{' '}
             <strong>
-                <span>DStudio Technology</span>
+                <span>Eazelite Technologies Pvt. Ltd.</span>
             </strong>
             . All Rights Reserved
         </div>

@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import '../recentSales/recentSales.css'
 import CardFilter from '../card/cardFilter/CardFilter'
 import RecentSalesTable from './recentSalesTable/RecentSalesTable'
+import { GlobalContext } from '../../../App'
 
 function RecentSales() {
   const [items, setItems] = useState([])
-  const [filter, setFilter] = useState('Today')
-  
-  const handleFilterChange = filter => {
-    setFilter(filter)
-  }
+  const {filter, handleFilterChange} = useContext(GlobalContext)
 
   const fetchData = () => {
     fetch('http://localhost:4000/recentsales')
