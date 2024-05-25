@@ -56,4 +56,4 @@ function RecentSalesTable({items}) {
   )
 }
 
-export default RecentSalesTable
+export default RecentSalesTable;
